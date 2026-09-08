@@ -4,15 +4,15 @@ import { ArrowRight } from 'lucide-react';
 
 const projects = [
   {
-    title: 'STUDENT UNION PRESIDENCY',
-    tag: 'CONCEPT CAMPAIGN',
-    image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=800&auto=format&fit=crop',
+    title: 'School Presidency',
+    tag: 'The Mandate Campaign',
+    image: '/assets/911 SAMA.jpg',
     desc: 'A complete identity overhaul focusing on transparency and progressive leadership.'
   },
   {
-    title: 'FACULTY SENATE',
-    tag: 'REALIZED CAMPAIGN',
-    image: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=800&auto=format&fit=crop',
+    title: 'Department Vice Presidency',
+    tag: 'The Future Campaign',
+    image: '/assets/Manifesto.jpg',
     desc: 'Strategic positioning and content production for a data-driven academic campaign.'
   }
 ];
@@ -113,7 +113,7 @@ export function Portfolio() {
           >
             {/* After Image (Bottom) */}
             <div className="absolute inset-0">
-               <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1200&auto=format&fit=crop" alt="After Design" className="w-full h-full object-cover" />
+               <img src="/assets/WIF fnl.jpg" alt="After Design" className="w-full h-full object-cover" />
                <div className="absolute top-6 right-6 px-4 py-1 glass rounded-full">
                  <span className="text-xs font-bold tracking-widest text-brand-purple">AFTER</span>
                </div>
@@ -124,7 +124,7 @@ export function Portfolio() {
               className="absolute inset-0 border-r-2 border-brand-gold bg-[#111] overflow-hidden"
               style={{ width: `${sliderPos}%` }}
             >
-              <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?q=80&w=1200&auto=format&fit=crop" alt="Before Design" className="absolute top-0 left-0 w-full h-full object-cover grayscale opacity-50" style={{ width: `${100 / (sliderPos / 100)}%` }} />
+              <img src="/assets/WIF 01.jpg" alt="Before Design" className="absolute top-0 left-0 w-full h-full object-cover opacity-50" style={{ width: `${100 / (sliderPos / 100)}%` }} />
               <div className="absolute top-6 left-6 px-4 py-1 glass rounded-full z-10">
                  <span className="text-xs font-bold tracking-widest text-white/50">BEFORE</span>
                </div>

@@ -60,18 +60,14 @@ export function Hero() {
           transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1], delay: 0.8 }}
           className="flex-1 relative w-full h-[500px] hidden md:block"
         >
-          <div className="absolute top-1/4 right-0 w-64 h-80 glass rounded-xl overflow-hidden campaign-shadow rotate-3 transform-gpu">
-             <img src="https://images.unsplash.com/photo-1542157585-ef20bbcce178?q=80&w=600&auto=format&fit=crop" alt="Candidate Portrait" className="w-full h-full object-cover opacity-80 mix-blend-luminosity hover:mix-blend-normal transition-all duration-700" />
+          <div className="absolute top-1/4 right-0 w-64 h-80 glass rounded-xl overflow-hidden campaign-shadow rotate-3 transform-gpu"> 
+             <img src="/assets/Sama 4 President.jpg" alt="Presidential Campaign" className="w-full h-full object-cover opacity-80 mix-blend-luminosity hover:mix-blend-normal hover:opacity-100 transition-all duration-700" />
           </div>
+          
           <div className="absolute bottom-1/4 left-1/4 w-48 h-64 glass rounded-xl overflow-hidden campaign-shadow -rotate-6 transform-gpu border-brand-purple/30 bg-glow-purple">
-            <div className="p-6 h-full flex flex-col justify-between">
-              <div className="w-8 h-8 rounded-full bg-brand-purple/50"></div>
-              <div className="space-y-2">
-                <div className="w-full h-2 bg-white/20 rounded"></div>
-                <div className="w-3/4 h-2 bg-white/20 rounded"></div>
-              </div>
-            </div>
+             <img src="/assets/Ella 4 VP.jpg" alt="Vice Presidential Campaign" className="w-full h-full object-cover opacity-80 mix-blend-luminosity hover:mix-blend-normal hover:opacity-100 transition-all duration-700" />
           </div>
+
           <div className="absolute top-1/2 left-10 w-40 h-12 glass rounded-full flex items-center px-4 gap-3 transform-gpu shadow-xl shadow-brand-gold/5 border-brand-gold/20">
             <div className="w-2 h-2 rounded-full bg-brand-gold text-glow-gold"></div>
             <span className="text-xs font-medium tracking-widest text-brand-gold">MANIFESTO</span>

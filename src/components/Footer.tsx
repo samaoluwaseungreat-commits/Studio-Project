@@ -31,10 +31,33 @@ export function Footer() {
             </div>
             <div className="flex flex-col gap-3">
               <span className="text-[10px] font-bold tracking-[0.2em] text-white/30 uppercase mb-2">Connect</span>
-              <a href="#" className="text-sm text-white/50 hover:text-white transition-colors">WhatsApp</a>
-              <a href="#" className="text-sm text-white/50 hover:text-white transition-colors">Instagram</a>
-              <a href="#" className="text-sm text-white/50 hover:text-white transition-colors">LinkedIn</a>
-              <a href="#contact" className="text-sm text-white/50 hover:text-white transition-colors">Contact</a>
+              <a 
+                href="https://wa.me/2348145653433" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-sm text-white/50 hover:text-emerald-400 transition-colors flex items-center gap-1.5"
+              >
+                WhatsApp (+234 814 565 3433)
+              </a>
+              <a 
+                href="https://instagram.com/the_sama_great" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-sm text-white/50 hover:text-pink-400 transition-colors"
+              >
+                Instagram (@the_sama_great)
+              </a>
+              <a 
+                href="https://x.com/d_SamaGreat" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-sm text-white/50 hover:text-sky-400 transition-colors"
+              >
+                Twitter / X (@d_SamaGreat)
+              </a>
+              <a href="#contact" className="text-sm text-white/50 hover:text-white transition-colors">
+                Candidate Intake Form
+              </a>
             </div>
           </div>
         </div>

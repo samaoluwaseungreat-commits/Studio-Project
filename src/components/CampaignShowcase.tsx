@@ -13,6 +13,8 @@ const images = [
   "June.jpg",
   "LEEE II.jpg",
   "MDT is YOU.jpg",
+  "NAES we yearn.jpg",
+  "OFA.jpg",
   "Sama 4 President.jpg",
   "SAMA on SET.jpg",
   "Ella 4 VP.jpg",
