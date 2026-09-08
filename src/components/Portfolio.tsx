@@ -7,13 +7,15 @@ const projects = [
     title: 'School Presidency',
     tag: 'The Mandate Campaign',
     image: '/assets/911 SAMA.jpg',
-    desc: 'A complete identity overhaul focusing on transparency and progressive leadership.'
+    desc: 'A complete identity overhaul focusing on transparency and progressive leadership.',
+    link: 'https://www.behance.net/oluwasesama' // Fallback to general profile for now since a specific one wasn't provided for this
   },
   {
     title: 'Department Vice Presidency',
     tag: 'The Future Campaign',
     image: '/assets/Manifesto.jpg',
-    desc: 'Strategic positioning and content production for a data-driven academic campaign.'
+    desc: 'Strategic positioning and content production for a data-driven academic campaign.',
+    link: 'https://www.behance.net/gallery/243232471/ELLA-Campaign-Brand-design'
   }
 ];
 
@@ -49,7 +51,7 @@ export function Portfolio() {
   }, []);
 
   return (
-    <section id="work" className="relative py-32 bg-[#08070A] overflow-hidden">
+    <section id="work" className="relative py-32 bg-brand-bg-alt overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8">
           <div>
@@ -60,23 +62,26 @@ export function Portfolio() {
               Campaigns that <span className="text-brand-purple text-glow-purple">win.</span>
             </p>
           </div>
-          <button className="text-sm font-semibold hover:text-brand-purple transition-colors flex items-center gap-2 group">
+          <a href="https://www.behance.net/oluwasesama" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold hover:text-brand-purple transition-colors flex items-center gap-2 group cursor-pointer">
             View All Work <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-          </button>
+          </a>
         </div>
 
         {/* Case Studies */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-32">
           {projects.map((project, i) => (
-            <motion.div 
+            <motion.a 
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
               key={project.title}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: i * 0.2 }}
-              className="group cursor-pointer"
+              className="group cursor-pointer block"
             >
-              <div className="relative aspect-[4/5] rounded-2xl overflow-hidden mb-6 bg-white/5">
+              <div className="relative aspect-[4/5] rounded-2xl overflow-hidden mb-6 bg-brand-text/5">
                 <div className="absolute inset-0 bg-brand-purple/20 mix-blend-overlay group-hover:opacity-0 transition-opacity duration-700 z-10"></div>
                 <img src={project.image} alt={project.title} className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
                 
@@ -91,8 +96,8 @@ export function Portfolio() {
                 <span className="text-[10px] font-bold tracking-widest text-brand-gold uppercase">{project.tag}</span>
               </div>
               <h3 className="text-2xl font-display font-bold mb-2 group-hover:text-brand-purple transition-colors">{project.title}</h3>
-              <p className="text-white/50 text-sm">{project.desc}</p>
-            </motion.div>
+              <p className="text-brand-text/50 text-sm">{project.desc}</p>
+            </motion.a>
           ))}
         </div>
 
@@ -100,12 +105,12 @@ export function Portfolio() {
         <div className="mt-32">
           <div className="text-center mb-16">
             <h3 className="text-3xl md:text-5xl font-display font-bold mb-4">The Value of Visual Communication</h3>
-            <p className="text-white/50">Drag the slider to see the difference strategy makes.</p>
+            <p className="text-brand-text/50">Drag the slider to see the difference strategy makes.</p>
           </div>
 
           <div 
             ref={sliderRef}
-            className="relative w-full max-w-4xl mx-auto aspect-video rounded-2xl overflow-hidden cursor-ew-resize bg-black border border-white/10 shadow-[0_0_50px_rgba(165,0,242,0.1)]"
+            className="relative w-full max-w-4xl mx-auto aspect-video rounded-2xl overflow-hidden cursor-ew-resize bg-black border border-brand-text/10 shadow-[0_0_50px_rgba(165,0,242,0.1)]"
             onMouseDown={() => setIsDragging(true)}
             onMouseMove={handleMouseMove}
             onTouchStart={() => setIsDragging(true)}
@@ -121,12 +126,12 @@ export function Portfolio() {
 
             {/* Before Image (Top, Clipped) */}
             <div 
-              className="absolute inset-0 border-r-2 border-brand-gold bg-[#111] overflow-hidden"
+              className="absolute inset-0 border-r-2 border-brand-gold bg-brand-bg-alt overflow-hidden"
               style={{ width: `${sliderPos}%` }}
             >
               <img src="/assets/WIF 01.jpg" alt="Before Design" className="absolute top-0 left-0 w-full h-full object-cover opacity-50" style={{ width: `${100 / (sliderPos / 100)}%` }} />
               <div className="absolute top-6 left-6 px-4 py-1 glass rounded-full z-10">
-                 <span className="text-xs font-bold tracking-widest text-white/50">BEFORE</span>
+                 <span className="text-xs font-bold tracking-widest text-brand-text/50">BEFORE</span>
                </div>
             </div>
 

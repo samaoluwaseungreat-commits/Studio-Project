@@ -48,7 +48,7 @@ export function Contact() {
       '📝 *Campaign Vision & Needs:*',
       formData.additional.trim() ? formData.additional : 'Ready to discuss strategy and branding.',
       '━━━━━━━━━━━━━━━━━━━━',
-      '_Sent via Studio Campaign Website_'
+      '_Sent via Cube Studio Website_'
     ];
     return lines.join('\n');
   };
@@ -90,7 +90,7 @@ export function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-white/60 text-lg mb-8 max-w-md font-light"
+            className="text-brand-text/60 text-lg mb-8 max-w-md font-light"
           >
             Tell us what you're running for, what you want your campaign to represent, and what you need help building.
           </motion.p>
@@ -101,15 +101,15 @@ export function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
-            className="space-y-4 pt-4 border-t border-white/10"
+            className="space-y-4 pt-4 border-t border-brand-text/10"
           >
-            <p className="text-xs uppercase tracking-[0.2em] text-white/40 font-medium">Direct Connect</p>
+            <p className="text-xs uppercase tracking-[0.2em] text-brand-text/40 font-medium">Direct Connect</p>
             <div className="flex flex-wrap gap-3">
               <a 
                 href={`https://wa.me/${whatsappNumber}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="glass px-4 py-2.5 rounded-full text-xs font-medium flex items-center gap-2 hover:bg-white/10 hover:border-brand-purple/40 text-white transition-all"
+                className="glass px-4 py-2.5 rounded-full text-xs font-medium flex items-center gap-2 hover:bg-brand-text/10 hover:border-brand-purple/40 text-brand-text transition-all"
               >
                 <MessageCircle size={15} className="text-emerald-400" />
                 <span>WhatsApp (+234 814 565 3433)</span>
@@ -118,7 +118,7 @@ export function Contact() {
                 href="https://instagram.com/the_sama_great"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="glass px-4 py-2.5 rounded-full text-xs font-medium flex items-center gap-2 hover:bg-white/10 hover:border-brand-purple/40 text-white transition-all"
+                className="glass px-4 py-2.5 rounded-full text-xs font-medium flex items-center gap-2 hover:bg-brand-text/10 hover:border-brand-purple/40 text-brand-text transition-all"
               >
                 <Instagram size={15} className="text-pink-400" />
                 <span>@the_sama_great</span>
@@ -127,7 +127,7 @@ export function Contact() {
                 href="https://x.com/d_SamaGreat"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="glass px-4 py-2.5 rounded-full text-xs font-medium flex items-center gap-2 hover:bg-white/10 hover:border-brand-purple/40 text-white transition-all"
+                className="glass px-4 py-2.5 rounded-full text-xs font-medium flex items-center gap-2 hover:bg-brand-text/10 hover:border-brand-purple/40 text-brand-text transition-all"
               >
                 <Twitter size={15} className="text-sky-400" />
                 <span>@d_SamaGreat</span>
@@ -143,8 +143,8 @@ export function Contact() {
           transition={{ delay: 0.4 }}
           className="lg:w-1/2"
         >
-          <form className="glass p-8 md:p-12 rounded-2xl border-white/5 space-y-8" onSubmit={handleSubmit}>
-            <div className="flex items-center justify-between border-b border-white/10 pb-4">
+          <form className="glass p-8 md:p-12 rounded-2xl border-brand-text/5 space-y-8" onSubmit={handleSubmit}>
+            <div className="flex items-center justify-between border-b border-brand-text/10 pb-4">
               <span className="text-xs uppercase tracking-widest text-brand-gold font-bold">Candidate Intake Form</span>
               <span className="text-[11px] text-emerald-400 flex items-center gap-1.5 font-medium">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
@@ -164,13 +164,13 @@ export function Contact() {
                       onChange={handleChange}
                       onFocus={() => setFocused(field.name)}
                       onBlur={() => setFocused(null)}
-                      className="w-full bg-transparent border-b border-white/20 py-2 text-white outline-none transition-colors duration-300 focus:border-brand-purple peer placeholder-transparent text-sm"
+                      className="w-full bg-transparent border-b border-brand-text/20 py-2 text-brand-text outline-none transition-colors duration-300 focus:border-brand-purple peer placeholder-transparent text-sm"
                       placeholder={field.label}
                     />
                     <label 
                       htmlFor={field.name}
                       className={`absolute left-0 transition-all duration-300 pointer-events-none
-                        ${focused === field.name || (formData as Record<string, string>)[field.name] ? '-top-5 text-xs text-brand-purple' : 'top-2 text-sm text-white/40 peer-placeholder-shown:top-2 peer-placeholder-shown:text-sm peer-focus:-top-5 peer-focus:text-xs peer-focus:text-brand-purple'}
+                        ${focused === field.name || (formData as Record<string, string>)[field.name] ? '-top-5 text-xs text-brand-purple' : 'top-2 text-sm text-brand-text/40 peer-placeholder-shown:top-2 peer-placeholder-shown:text-sm peer-focus:-top-5 peer-focus:text-xs peer-focus:text-brand-purple'}
                       `}
                     >
                       {field.label} {field.required ? '*' : ''}
@@ -188,13 +188,13 @@ export function Contact() {
                       onChange={handleChange}
                       onFocus={() => setFocused('additional')}
                       onBlur={() => setFocused(null)}
-                      className="w-full bg-transparent border-b border-white/20 py-2 text-white outline-none transition-colors duration-300 focus:border-brand-purple peer placeholder-transparent resize-none text-sm"
+                      className="w-full bg-transparent border-b border-brand-text/20 py-2 text-brand-text outline-none transition-colors duration-300 focus:border-brand-purple peer placeholder-transparent resize-none text-sm"
                       placeholder="Additional Information"
                     ></textarea>
                     <label 
                       htmlFor="additional"
                       className={`absolute left-0 transition-all duration-300 pointer-events-none
-                        ${focused === 'additional' || formData.additional ? '-top-5 text-xs text-brand-purple' : 'top-2 text-sm text-white/40 peer-placeholder-shown:top-2 peer-placeholder-shown:text-sm peer-focus:-top-5 peer-focus:text-xs peer-focus:text-brand-purple'}
+                        ${focused === 'additional' || formData.additional ? '-top-5 text-xs text-brand-purple' : 'top-2 text-sm text-brand-text/40 peer-placeholder-shown:top-2 peer-placeholder-shown:text-sm peer-focus:-top-5 peer-focus:text-xs peer-focus:text-brand-purple'}
                       `}
                     >
                       Campaign Vision & Additional Details
@@ -214,14 +214,14 @@ export function Contact() {
                   href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(generateWhatsAppMessage())}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="underline font-semibold hover:text-white"
+                  className="underline font-semibold hover:text-brand-text"
                 >
                   Click here to resend
                 </a>
               </div>
             )}
 
-            <button type="submit" className="w-full group relative inline-flex items-center justify-center px-8 py-5 text-lg font-semibold text-brand-white transition-all duration-300 hover:scale-[1.02] mt-4">
+            <button type="submit" className="w-full group relative inline-flex items-center justify-center px-8 py-5 text-lg font-semibold text-brand-text transition-all duration-300 hover:scale-[1.02] mt-4">
               <span className="absolute inset-0 rounded-xl bg-brand-purple/20 border border-brand-purple/50 group-hover:bg-brand-purple group-hover:shadow-[0_0_30px_rgba(165,0,242,0.6)] transition-all duration-300"></span>
               <span className="relative flex items-center gap-3">
                 Send Inquiry to WhatsApp <ArrowRight className="text-brand-gold group-hover:translate-x-2 transition-transform duration-300" />

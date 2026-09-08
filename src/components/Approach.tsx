@@ -6,7 +6,7 @@ export function Approach() {
   const ours = ['Candidate', 'Positioning', 'Story', 'Identity', 'Content', 'Campaign'];
 
   return (
-    <section className="relative py-32 bg-[#08070A] overflow-hidden">
+    <section className="relative py-32 bg-brand-bg-alt overflow-hidden">
       {/* Background glow */}
       <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-purple/5 rounded-full blur-[150px] pointer-events-none"></div>
 
@@ -25,7 +25,7 @@ export function Approach() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-white/50 max-w-2xl mx-auto text-lg"
+            className="text-brand-text/50 max-w-2xl mx-auto text-lg"
           >
             Design without strategy is just decoration. We build the foundation first, ensuring every visual decision serves the campaign's objective.
           </motion.p>
@@ -34,15 +34,15 @@ export function Approach() {
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-8 items-center justify-between">
           
           {/* Typical */}
-          <div className="w-full lg:w-[40%] glass p-10 rounded-2xl border-white/5">
-            <h3 className="text-sm font-medium tracking-widest text-white/40 uppercase mb-12 flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-white/20"></span> Typical Campaign
+          <div className="w-full lg:w-[40%] glass p-10 rounded-2xl border-brand-text/5">
+            <h3 className="text-sm font-medium tracking-widest text-brand-text/40 uppercase mb-12 flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-brand-text/20"></span> Typical Campaign
             </h3>
             <div className="flex flex-wrap items-center gap-4 opacity-50">
               {typical.map((step, i) => (
                 <div key={step} className="flex items-center gap-4">
-                  <span className="text-lg font-display text-white/80">{step}</span>
-                  {i < typical.length - 1 && <ArrowRight size={16} className="text-white/30" />}
+                  <span className="text-lg font-display text-brand-text/80">{step}</span>
+                  {i < typical.length - 1 && <ArrowRight size={16} className="text-brand-text/30" />}
                 </div>
               ))}
             </div>
@@ -71,7 +71,7 @@ export function Approach() {
                   transition={{ delay: i * 0.15 + 0.3 }}
                   className="flex items-center gap-4"
                 >
-                  <span className={`text-xl font-display font-medium ${i === ours.length - 1 ? 'text-brand-purple text-glow-purple font-bold text-2xl' : 'text-white'}`}>{step}</span>
+                  <span className={`text-xl font-display font-medium ${i === ours.length - 1 ? 'text-brand-purple text-glow-purple font-bold text-2xl' : 'text-brand-text'}`}>{step}</span>
                   {i < ours.length - 1 && <ArrowRight size={18} className="text-brand-gold/60" />}
                 </motion.div>
               ))}

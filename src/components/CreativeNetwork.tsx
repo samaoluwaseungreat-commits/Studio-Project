@@ -41,7 +41,7 @@ export function CreativeNetwork() {
         </motion.div>
 
         {/* Orbit Lines */}
-        <div className="absolute w-[280px] md:w-[480px] h-[280px] md:h-[480px] rounded-full border border-white/5 border-dashed pointer-events-none animate-[spin_120s_linear_infinite]"></div>
+        <div className="absolute w-[280px] md:w-[480px] h-[280px] md:h-[480px] rounded-full border border-brand-text/5 border-dashed pointer-events-none animate-[spin_120s_linear_infinite]"></div>
 
         {/* Specialists */}
         {specialists.map((spec, i) => {

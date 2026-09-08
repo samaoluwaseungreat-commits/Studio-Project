@@ -30,7 +30,7 @@ const marqueeImages = [...images, ...images];
 
 export function CampaignShowcase() {
   return (
-    <section className="py-24 bg-[#08070A] relative overflow-hidden" id="campaigns">
+    <section className="py-24 bg-brand-bg-alt relative overflow-hidden" id="campaigns">
       <div className="max-w-7xl mx-auto px-6 mb-16">
         <div className="flex flex-col items-center text-center">
           <span className="uppercase text-[11px] tracking-[0.2em] text-brand-gold mb-4 block">Electoral Campaigns</span>
@@ -45,8 +45,8 @@ export function CampaignShowcase() {
       {/* Marquee Track */}
       <div className="relative w-full overflow-hidden flex">
         {/* Left and Right Gradients for smooth fade out */}
-        <div className="absolute top-0 bottom-0 left-0 w-32 bg-gradient-to-r from-[#08070A] to-transparent z-10 pointer-events-none" />
-        <div className="absolute top-0 bottom-0 right-0 w-32 bg-gradient-to-l from-[#08070A] to-transparent z-10 pointer-events-none" />
+        <div className="absolute top-0 bottom-0 left-0 w-32 bg-gradient-to-r from-brand-bg-alt to-transparent z-10 pointer-events-none" />
+        <div className="absolute top-0 bottom-0 right-0 w-32 bg-gradient-to-l from-brand-bg-alt to-transparent z-10 pointer-events-none" />
         
         {/* 
           Using w-max and padding right on items ensures the total width is exactly 
@@ -58,7 +58,7 @@ export function CampaignShowcase() {
               key={idx} 
               className="relative flex-none w-[280px] h-[380px] pr-6"
             >
-              <div className="w-full h-full rounded-xl overflow-hidden campaign-shadow border border-white/5 group bg-[#111]">
+              <div className="w-full h-full rounded-xl overflow-hidden campaign-shadow border border-brand-text/5 group bg-brand-bg-alt">
                 <img 
                   src={`/assets/${img}`} 
                   alt={`Campaign Flyer - ${img}`}

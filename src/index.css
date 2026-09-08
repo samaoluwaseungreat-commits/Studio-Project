@@ -1,23 +1,38 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-bg: #0B0A0D;
+  --color-brand-bg: var(--theme-bg);
+  --color-brand-bg-alt: var(--theme-bg-alt);
+  --color-brand-text: var(--theme-text);
   --color-brand-purple: #A500F2;
   --color-brand-gold: #D4AF37;
-  --color-brand-white: #FFFFFF;
   --font-display: 'Space Grotesk', sans-serif;
   --font-sans: 'Inter', sans-serif;
 }
 
 @layer base {
   :root {
-    --brand-bg: 11 10 13;
+    --theme-bg: #FFFFFF;
+    --theme-bg-alt: #F4F4F5;
+    --theme-text: #0B0A0D;
+    
+    --brand-bg: 255 255 255;
     --brand-purple: 165 0 242;
     --brand-gold: 212 175 55;
+    --brand-text: 11 10 13;
+  }
+  
+  .dark {
+    --theme-bg: #0B0A0D;
+    --theme-bg-alt: #08070A;
+    --theme-text: #FFFFFF;
+    
+    --brand-bg: 11 10 13;
+    --brand-text: 255 255 255;
   }
   
   html, body {
-    @apply bg-brand-bg text-brand-white font-sans overflow-x-hidden;
+    @apply bg-brand-bg text-brand-text font-sans overflow-x-hidden transition-colors duration-300;
     scroll-behavior: smooth;
   }
   
@@ -40,12 +55,13 @@
   }
   
   .glass {
-    @apply bg-[rgba(255,255,255,0.03)] backdrop-blur-[12px] border border-[rgba(255,255,255,0.08)];
+    @apply bg-brand-text/5 backdrop-blur-[12px] border border-brand-text/10;
   }
   
   .campaign-shadow {
-    box-shadow: 0 20px 40px -15px rgba(165, 0, 242, 0.2);
+    box-shadow: 0 20px 40px -15px rgba(var(--brand-purple), 0.2);
   }
+
   
   @keyframes pulse-ring {
     0% { transform: scale(1); opacity: 0; }

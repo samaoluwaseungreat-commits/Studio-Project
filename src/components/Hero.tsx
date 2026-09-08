@@ -25,10 +25,10 @@ export function Hero() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-            className="text-5xl md:text-7xl lg:text-[80px] font-display font-bold leading-[0.9] tracking-tighter text-white"
+            className="text-5xl md:text-7xl lg:text-[80px] font-display font-bold leading-[0.9] tracking-tighter text-brand-text"
           >
-            <span className="block text-white/90">YOUR CAMPAIGN</span>
-            <span className="block text-white/90">DESERVES MORE</span>
+            <span className="block text-brand-text/90">YOUR CAMPAIGN</span>
+            <span className="block text-brand-text/90">DESERVES MORE</span>
             <span className="block text-brand-purple text-glow-purple">THAN A FLYER.</span>
           </motion.h1>
           
@@ -36,7 +36,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.4 }}
-            className="text-lg md:text-xl text-white/60 max-w-xl font-light leading-relaxed"
+            className="text-lg md:text-xl text-brand-text/60 max-w-xl font-light leading-relaxed"
           >
             We build the strategy, story, visual identity and digital communication behind student election campaigns.
           </motion.p>
@@ -47,7 +47,7 @@ export function Hero() {
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.6 }}
             className="pt-4"
           >
-            <a href="#contact" className="inline-flex items-center justify-center px-8 py-4 glass rounded-full text-white hover:bg-white/10 transition-all border border-white/20 uppercase tracking-widest text-[11px] font-medium mt-4">
+            <a href="#contact" className="inline-flex items-center justify-center px-8 py-4 glass rounded-full text-brand-text hover:bg-brand-text/10 transition-all border border-brand-text/20 uppercase tracking-widest text-[11px] font-medium mt-4">
               Start My Campaign →
             </a>
           </motion.div>
@@ -82,7 +82,7 @@ export function Hero() {
         transition={{ duration: 1, delay: 1.5 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
       >
-        <span className="text-[10px] uppercase tracking-widest text-white/40">Scroll</span>
+        <span className="text-[10px] uppercase tracking-widest text-brand-text/40">Scroll</span>
         <div className="w-[1px] h-12 bg-gradient-to-b from-white/40 to-transparent"></div>
       </motion.div>
     </section>

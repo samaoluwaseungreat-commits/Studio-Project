@@ -61,7 +61,7 @@ export function Packages() {
   const whatsappNumber = '2348145653433';
 
   return (
-    <section id="packages" className="relative py-32 bg-brand-bg overflow-hidden border-t border-white/5">
+    <section id="packages" className="relative py-32 bg-brand-bg overflow-hidden border-t border-brand-text/5">
        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-brand-purple/10 rounded-full blur-[150px] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
@@ -79,7 +79,7 @@ export function Packages() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-white/50"
+            className="text-brand-text/50"
           >
             Select the scope that matches your ambition.
           </motion.p>
@@ -98,8 +98,8 @@ export function Packages() {
                 transition={{ duration: 0.6, delay: index * 0.15 }}
                 className={`relative p-8 rounded-2xl group transition-all duration-500 hover:-translate-y-2 ${
                   pkg.recommended 
-                    ? 'bg-white/5 border border-brand-purple/50 shadow-[0_0_40px_rgba(165,0,242,0.15)] hover:shadow-[0_0_60px_rgba(165,0,242,0.25)] z-10 md:-mt-8 md:mb-8' 
-                    : 'glass hover:bg-white/10'
+                    ? 'bg-brand-text/5 border border-brand-purple/50 shadow-[0_0_40px_rgba(165,0,242,0.15)] hover:shadow-[0_0_60px_rgba(165,0,242,0.25)] z-10 md:-mt-8 md:mb-8' 
+                    : 'glass hover:bg-brand-text/10'
                 }`}
               >
                 {pkg.recommended && (
@@ -108,16 +108,16 @@ export function Packages() {
                   </div>
                 )}
                 
-                <h3 className={`text-2xl font-display font-bold mb-2 ${pkg.recommended ? 'text-brand-purple text-glow-purple' : 'text-white'}`}>
+                <h3 className={`text-2xl font-display font-bold mb-2 ${pkg.recommended ? 'text-brand-purple text-glow-purple' : 'text-brand-text'}`}>
                   {pkg.name}
                 </h3>
-                <p className="text-sm text-white/50 mb-8 pb-8 border-b border-white/10">"{pkg.desc}"</p>
+                <p className="text-sm text-brand-text/50 mb-8 pb-8 border-b border-brand-text/10">"{pkg.desc}"</p>
                 
                 <ul className="space-y-4 mb-12">
                   {pkg.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-3">
-                      <Check size={18} className={pkg.recommended ? 'text-brand-purple mt-0.5 shrink-0' : 'text-white/30 mt-0.5 shrink-0'} />
-                      <span className="text-sm text-white/80">{feature}</span>
+                      <Check size={18} className={pkg.recommended ? 'text-brand-purple mt-0.5 shrink-0' : 'text-brand-text/30 mt-0.5 shrink-0'} />
+                      <span className="text-sm text-brand-text/80">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -129,7 +129,7 @@ export function Packages() {
                   className={`w-full py-4 rounded-xl text-sm font-semibold flex justify-center items-center gap-2 transition-all duration-300 ${
                     pkg.recommended
                       ? 'bg-brand-purple text-white hover:bg-brand-purple/90 shadow-[0_0_20px_rgba(165,0,242,0.4)]'
-                      : 'bg-white/5 text-white hover:bg-white/10'
+                      : 'bg-brand-text/5 text-brand-text hover:bg-brand-text/10'
                   }`}
                 >
                   <MessageCircle size={16} className="text-brand-gold shrink-0" />

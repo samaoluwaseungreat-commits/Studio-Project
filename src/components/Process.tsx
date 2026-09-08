@@ -43,14 +43,14 @@ export function Process() {
           <p className="text-4xl font-display font-bold mb-6">
             The Campaign Timeline
           </p>
-          <p className="text-white/50">
+          <p className="text-brand-text/50">
             A methodical approach to building your platform, from initial discovery to election day refinement.
           </p>
         </div>
 
         <div className="md:w-2/3 relative">
           {/* Vertical line */}
-          <div className="absolute left-4 md:left-[19px] top-4 bottom-4 w-[2px] bg-white/10 rounded-full"></div>
+          <div className="absolute left-4 md:left-[19px] top-4 bottom-4 w-[2px] bg-brand-text/10 rounded-full"></div>
           
           {/* Active line progress */}
           <motion.div 
@@ -68,7 +68,7 @@ export function Process() {
               return (
                 <div key={step} className="flex gap-8 items-center transition-opacity duration-500" style={{ opacity: isCurrent ? 1 : isActive ? 0.5 : 0.2 }}>
                   <div className="relative flex-shrink-0">
-                    <div className={`w-10 h-10 rounded-full border-2 flex items-center justify-center transition-colors duration-500 bg-brand-bg ${isActive ? 'border-brand-purple' : 'border-white/20'}`}>
+                    <div className={`w-10 h-10 rounded-full border-2 flex items-center justify-center transition-colors duration-500 bg-brand-bg ${isActive ? 'border-brand-purple' : 'border-brand-text/20'}`}>
                       {isActive && (
                         <motion.div 
                           layoutId="activeDot"
@@ -80,7 +80,7 @@ export function Process() {
                   
                   <div>
                     <span className="text-sm font-mono text-brand-gold mb-1 block">0{i + 1}</span>
-                    <h3 className={`text-3xl md:text-5xl font-display font-bold transition-colors duration-500 ${isCurrent ? 'text-white' : 'text-white/50'}`}>
+                    <h3 className={`text-3xl md:text-5xl font-display font-bold transition-colors duration-500 ${isCurrent ? 'text-brand-text' : 'text-brand-text/50'}`}>
                       {step}
                     </h3>
                   </div>
