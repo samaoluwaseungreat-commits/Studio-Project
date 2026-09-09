@@ -40,20 +40,26 @@ export function Footer() {
                 WhatsApp (+234 814 565 3433)
               </a>
               <a 
-                href="https://instagram.com/the_sama_great" 
+                href="mailto:thecubestudio01@gmail.com" 
+                className="text-sm text-brand-text/50 hover:text-brand-purple transition-colors"
+              >
+                thecubestudio01@gmail.com
+              </a>
+              <a 
+                href="https://instagram.com/cube_studio_official" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="text-sm text-brand-text/50 hover:text-pink-400 transition-colors"
               >
-                Instagram (@the_sama_great)
+                Instagram (@cube_studio_official)
               </a>
               <a 
-                href="https://x.com/d_SamaGreat" 
+                href="https://x.com/CubeStudio01" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="text-sm text-brand-text/50 hover:text-sky-400 transition-colors"
+                className="text-sm text-brand-text/50 hover:text-brand-text transition-colors"
               >
-                Twitter / X (@d_SamaGreat)
+                X (@CubeStudio01)
               </a>
               <a href="#contact" className="text-sm text-brand-text/50 hover:text-brand-text transition-colors">
                 Candidate Intake Form
